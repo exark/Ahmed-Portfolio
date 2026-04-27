@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Ahmed Ben Hamouda",
+    "roles": ["Software Engineer", "Full-Stack Developer", "IT Support Specialist"],
+    "tagline": "I build clean, responsive and useful digital products, combining software engineering, cloud experience and real-world technical support.",
+    "viewProjects": "View Projects",
+    "downloadResume": "Download Resume",
+    "contactMe": "Contact Me",
+    "location": "Tunis / Ariana, Tunisia",
+    "available": "Available for opportunities"
+  },
+  "about": {
+    "title": "About",
+    "kicker": "A hybrid technical profile",
+    "p1": "I'm a software engineering graduate specialized in software architecture, with hands-on experience in full-stack web development across React, Angular, TypeScript and .NET Core.",
+    "p2": "I work daily with cloud platforms like Microsoft Azure and Supabase, design SQL data models, integrate APIs such as Microsoft Graph, and ship production interfaces deployed on Vercel.",
+    "p3": "Alongside engineering, I bring a strong technical support background — diagnosing real incidents, communicating with users, and writing the kind of clear documentation that makes software easier to live with.",
+    "stats": {
+      "years": "Years of experience",
+      "projects": "Production projects",
+      "stack": "Core technologies"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "kicker": "Tools I work with",
+    "categories": {
+      "frontend": "Front-End",
+      "backend": "Back-End & APIs",
+      "databases": "Databases",
+      "cloud": "Cloud & DevOps",
+      "support": "IT Support",
+      "tools": "Tools & Methods"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "kicker": "Where I've worked",
+    "present": "Present",
+    "items": [
+      {
+        "role": "Technical Support Specialist",
+        "company": "Téléperformance",
+        "location": "Tunis, Tunisia",
+        "period": "October 2023 – Present",
+        "points": [
+          "Provide first-level technical support through phone and email",
+          "Diagnose issues across web applications, user accounts, connectivity, system configuration, cloud environments and devices",
+          "Reproduce incidents, collect technical context, document cases and escalate when needed",
+          "Improve internal documentation to reduce repetitive issues and speed up resolution"
+        ]
+      },
+      {
+        "role": "Ingénieur Étude et Développement",
+        "company": "DataHorizon / TEAMSFOX",
+        "location": "Paris, France / Hybrid Tunisia",
+        "period": "September 2022 – February 2023",
+        "points": [
+          "Developed analytical dashboards for TEAMSFOX visualizing Microsoft 365 usage by region and period",
+          "Built responsive Angular interfaces for Exchange, Teams, OneDrive, Word, Excel and OneNote indicators",
+          "Integrated Microsoft Graph API to collect and structure Office 365 data",
+          "Developed Azure Functions Timer Trigger to automate periodic data extraction",
+          "Implemented user access rights and authored functional, technical and user documentation"
+        ],
+        "stack": "C#, .NET Core 5, Angular 10, TypeScript, Microsoft Azure, Azure DevOps, Microsoft Graph API, Bootstrap, Git"
+      },
+      {
+        "role": "Software Engineering Intern — Final Year Project",
+        "company": "DataHorizon",
+        "location": "Remote",
+        "period": "January 2022 – August 2022",
+        "points": [
+          "Designed and developed a web application for sharing baby accessories between individuals",
+          "Created UML diagrams, database models and application features",
+          "Used SQL Server Management Studio and Azure SQL",
+          "Implemented real-time messaging with SignalR",
+          "Worked on user experience and end-to-end application flows"
+        ],
+        "stack": "Angular, TypeScript, .NET Core, SQL Server, Azure SQL, SignalR, Spring Security, JPA, Git"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "kicker": "Selected work",
+    "viewSite": "Visit website",
+    "viewCode": "View code",
+    "items": [
+      {
+        "name": "Carteron Industries",
+        "subtitle": "Official Website & Admin Dashboard",
+        "description": "A bilingual React + Vite platform with multi-page routing, product, contact, FAQ and legal pages, two multi-step survey flows for golf clubs and families, consent handling, Supabase RPC submission, protected admin authentication, statistics, charts, filters, search, status management, admin notes, deletion, CSV and PDF export.",
+        "stack": ["React", "Vite", "React Router", "i18next", "Supabase", "EmailJS", "Tailwind CSS", "Material UI", "Framer Motion", "Recharts", "PapaParse", "jsPDF", "Vercel"],
+        "site": "https://carteron-industries-vite.vercel.app/",
+        "github": "https://github.com/exark"
+      },
+      {
+        "name": "Soléne",
+        "subtitle": "E-commerce Front-End",
+        "description": "A responsive e-commerce front-end with a dynamic product catalogue, search, smooth navigation, mobile-first interface, persistent cart using LocalStorage, Supabase product management and Vercel deployment.",
+        "stack": ["React", "Vite", "JavaScript", "Tailwind CSS", "Supabase", "LocalStorage", "Vercel"],
+        "github": "https://github.com/exark"
+      },
+      {
+        "name": "TMF Carrier",
+        "subtitle": "Android Intervention Management App",
+        "description": "An Android application allowing clients to create and track intervention requests while technicians manage statuses, reports, notifications and intervention history.",
+        "stack": ["Android Studio", "Java", "Firebase NoSQL"],
+        "github": "https://github.com/exark"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "kicker": "Academic background",
+    "items": [
+      {
+        "degree": "National Engineering Degree in Software Architecture",
+        "school": "ESPRIT",
+        "period": "September 2019 – June 2023"
+      },
+      {
+        "degree": "Bachelor's Degree in Management Information Technology",
+        "school": "TIME Private Higher School",
+        "period": "September 2015 – June 2018"
+      }
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "kicker": "How I communicate",
+    "items": [
+      { "name": "Arabic", "level": "Native" },
+      { "name": "French", "level": "Professional proficiency" },
+      { "name": "English", "level": "Full professional proficiency" }
+    ]
+  },
+  "resume": {
+    "title": "Resume",
+    "kicker": "The full picture",
+    "description": "Download a PDF copy of my full resume — experience, projects, education and skills in one document.",
+    "download": "Download Resume"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "kicker": "Let's talk",
+    "description": "Open to engineering, full-stack and technical roles. Reach out and I'll get back to you.",
+    "email": "Email",
+    "github": "GitHub",
+    "location": "Location",
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "send": "Send message",
+      "sent": "Thanks — I'll be in touch soon."
+    }
+  },
+  "footer": {
+    "copy": "© 2026 Ahmed Ben Hamouda. Built with React and deployed on Vercel."
+  }
+}
