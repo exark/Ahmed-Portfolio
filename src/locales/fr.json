@@ -1,0 +1,172 @@
+{
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "education": "Formation",
+    "contact": "Contact",
+    "resume": "CV"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Ahmed Ben Hamouda",
+    "roles": ["Ingénieur Logiciel", "Développeur Full-Stack", "Spécialiste Support IT"],
+    "tagline": "Je conçois des produits numériques clairs, réactifs et utiles, en combinant ingénierie logicielle, expérience cloud et support technique de terrain.",
+    "viewProjects": "Voir les projets",
+    "downloadResume": "Télécharger le CV",
+    "contactMe": "Me contacter",
+    "location": "Tunis / Ariana, Tunisie",
+    "available": "Disponible pour de nouvelles opportunités"
+  },
+  "about": {
+    "title": "À propos",
+    "kicker": "Un profil technique hybride",
+    "p1": "Diplômé en ingénierie logicielle, spécialisé en architecture logicielle, j'ai une expérience concrète en développement web full-stack avec React, Angular, TypeScript et .NET Core.",
+    "p2": "Je travaille au quotidien avec des plateformes cloud comme Microsoft Azure et Supabase, je conçois des modèles de données SQL, j'intègre des APIs comme Microsoft Graph, et je livre des interfaces en production déployées sur Vercel.",
+    "p3": "À côté de l'ingénierie, j'apporte une solide expérience en support technique — diagnostic d'incidents réels, communication avec les utilisateurs, et rédaction de documentation claire qui rend les logiciels plus simples à exploiter.",
+    "stats": {
+      "years": "Années d'expérience",
+      "projects": "Projets en production",
+      "stack": "Technologies maîtrisées"
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "kicker": "Mes outils de travail",
+    "categories": {
+      "frontend": "Front-End",
+      "backend": "Back-End & APIs",
+      "databases": "Bases de données",
+      "cloud": "Cloud & DevOps",
+      "support": "Support IT",
+      "tools": "Outils & Méthodes"
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "kicker": "Mon parcours",
+    "present": "Aujourd'hui",
+    "items": [
+      {
+        "role": "Spécialiste Support Technique",
+        "company": "Téléperformance",
+        "location": "Tunis, Tunisie",
+        "period": "Octobre 2023 – Aujourd'hui",
+        "points": [
+          "Support technique de premier niveau par téléphone et email",
+          "Diagnostic d'incidents sur les applications web, comptes utilisateurs, connectivité, configuration système, environnements cloud et appareils",
+          "Reproduction d'incidents, collecte d'informations techniques, documentation des cas et escalade si nécessaire",
+          "Amélioration continue de la documentation interne pour réduire les incidents répétitifs et accélérer la résolution"
+        ]
+      },
+      {
+        "role": "Ingénieur Étude et Développement",
+        "company": "DataHorizon / TEAMSFOX",
+        "location": "Paris, France / Hybride Tunisie",
+        "period": "Septembre 2022 – Février 2023",
+        "points": [
+          "Développement de tableaux de bord analytiques pour TEAMSFOX visualisant l'utilisation de Microsoft 365 par région et période",
+          "Création d'interfaces Angular réactives pour les indicateurs Exchange, Teams, OneDrive, Word, Excel et OneNote",
+          "Intégration de l'API Microsoft Graph pour collecter et structurer les données Office 365",
+          "Développement d'Azure Functions Timer Trigger pour automatiser l'extraction périodique des données",
+          "Implémentation des droits d'accès et rédaction de documentation fonctionnelle, technique et utilisateur"
+        ],
+        "stack": "C#, .NET Core 5, Angular 10, TypeScript, Microsoft Azure, Azure DevOps, Microsoft Graph API, Bootstrap, Git"
+      },
+      {
+        "role": "Stage Ingénieur — Projet de Fin d'Études",
+        "company": "DataHorizon",
+        "location": "À distance",
+        "period": "Janvier 2022 – Août 2022",
+        "points": [
+          "Conception et développement d'une application web de partage d'accessoires bébé entre particuliers",
+          "Création de diagrammes UML, modèles de base de données et fonctionnalités applicatives",
+          "Utilisation de SQL Server Management Studio et Azure SQL",
+          "Implémentation de la messagerie temps réel avec SignalR",
+          "Travail sur l'expérience utilisateur et les flux applicatifs de bout en bout"
+        ],
+        "stack": "Angular, TypeScript, .NET Core, SQL Server, Azure SQL, SignalR, Spring Security, JPA, Git"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projets",
+    "kicker": "Sélection de réalisations",
+    "viewSite": "Voir le site",
+    "viewCode": "Voir le code",
+    "items": [
+      {
+        "name": "Carteron Industries",
+        "subtitle": "Site officiel & Tableau de bord admin",
+        "description": "Une plateforme React + Vite bilingue avec routage multi-pages, pages produit, contact, FAQ et mentions légales, deux flux d'enquêtes multi-étapes pour clubs de golf et familles, gestion du consentement, soumission via Supabase RPC, authentification admin protégée, statistiques, graphiques, filtres, recherche, gestion des statuts, notes admin, suppression, export CSV et PDF.",
+        "stack": ["React", "Vite", "React Router", "i18next", "Supabase", "EmailJS", "Tailwind CSS", "Material UI", "Framer Motion", "Recharts", "PapaParse", "jsPDF", "Vercel"],
+        "site": "https://carteron-industries-vite.vercel.app/",
+        "github": "https://github.com/exark"
+      },
+      {
+        "name": "Soléne",
+        "subtitle": "Front-End e-commerce",
+        "description": "Un front-end e-commerce réactif avec catalogue produits dynamique, recherche, navigation fluide, interface mobile-first, panier persistant via LocalStorage, gestion des produits Supabase et déploiement Vercel.",
+        "stack": ["React", "Vite", "JavaScript", "Tailwind CSS", "Supabase", "LocalStorage", "Vercel"],
+        "github": "https://github.com/exark"
+      },
+      {
+        "name": "TMF Carrier",
+        "subtitle": "Application Android de gestion d'interventions",
+        "description": "Une application Android permettant aux clients de créer et suivre des demandes d'intervention pendant que les techniciens gèrent les statuts, rapports, notifications et l'historique des interventions.",
+        "stack": ["Android Studio", "Java", "Firebase NoSQL"],
+        "github": "https://github.com/exark"
+      }
+    ]
+  },
+  "education": {
+    "title": "Formation",
+    "kicker": "Parcours académique",
+    "items": [
+      {
+        "degree": "Diplôme National d'Ingénieur en Architecture Logicielle",
+        "school": "ESPRIT",
+        "period": "Septembre 2019 – Juin 2023"
+      },
+      {
+        "degree": "Licence en Informatique de Gestion",
+        "school": "TIME Higher School",
+        "period": "Septembre 2015 – Juin 2018"
+      }
+    ]
+  },
+  "languages": {
+    "title": "Langues",
+    "kicker": "Communication",
+    "items": [
+      { "name": "Arabe", "level": "Langue maternelle" },
+      { "name": "Français", "level": "Maîtrise professionnelle" },
+      { "name": "Anglais", "level": "Maîtrise professionnelle complète" }
+    ]
+  },
+  "resume": {
+    "title": "CV",
+    "kicker": "Le profil complet",
+    "description": "Téléchargez une version PDF de mon CV complet — expérience, projets, formation et compétences réunis dans un seul document.",
+    "download": "Télécharger le CV"
+  },
+  "contact": {
+    "title": "Restons en contact",
+    "kicker": "Discutons",
+    "description": "Ouvert aux postes d'ingénierie, full-stack et techniques. Écrivez-moi et je vous répondrai rapidement.",
+    "email": "Email",
+    "github": "GitHub",
+    "location": "Localisation",
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "message": "Votre message",
+      "send": "Envoyer le message",
+      "sent": "Merci — je reviens vers vous très vite."
+    }
+  },
+  "footer": {
+    "copy": "© 2026 Ahmed Ben Hamouda. Réalisé avec React et déployé sur Vercel."
+  }
+}
