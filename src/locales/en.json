@@ -196,9 +196,31 @@
     "form": {
       "name": "Your name",
       "email": "Your email",
+      "phone": "Phone",
+      "company": "Company",
+      "subject": "Subject",
       "message": "Your message",
+      "consent": "I agree that my information will only be used to process my contact request.",
       "send": "Send message",
-      "sent": "Thanks — I'll be in touch soon."
+      "sending": "Sending…",
+      "sent": "Message sent",
+      "successDetail": "Thanks — I'll be in touch soon.",
+      "errorGeneric": "Something went wrong. Please try again.",
+      "errorNetwork": "Network error. Please check your connection.",
+      "errorRateLimit": "Too many attempts. Please retry in a minute.",
+      "errors": {
+        "nameTooShort": "Name must contain at least 2 characters.",
+        "nameTooLong": "Name is too long.",
+        "emailInvalid": "Invalid email address.",
+        "emailTooLong": "Email is too long.",
+        "phoneTooLong": "Phone number is too long.",
+        "companyTooLong": "Company name is too long.",
+        "subjectTooShort": "Subject must contain at least 3 characters.",
+        "subjectTooLong": "Subject is too long.",
+        "messageTooShort": "Message must contain at least 10 characters.",
+        "messageTooLong": "Message is too long.",
+        "consentRequired": "You must agree to send the message."
+      }
     }
   },
   "footer": {
