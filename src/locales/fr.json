@@ -202,6 +202,10 @@
     }
   },
   "footer": {
-    "copy": "© 2026 Ahmed Ben Hamouda. Réalisé avec React et déployé sur Vercel."
+    "tagline": "Ingénieur logiciel spécialisé en développement full-stack et architecture cloud. Passionné par la création de solutions numériques élégantes et performantes.",
+    "quickLinks": "Liens rapides",
+    "contactInfo": "Contact",
+    "copy": "© 2026 Ahmed Ben Hamouda. Tous droits réservés.",
+    "builtWith": "Réalisé avec React, TypeScript et déployé sur Vercel."
   }
 }

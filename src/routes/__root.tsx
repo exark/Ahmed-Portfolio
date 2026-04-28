@@ -43,6 +43,15 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/exark-logo.png",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "/exark-logo.png",
+      },
     ],
   }),
   shellComponent: RootShell,
