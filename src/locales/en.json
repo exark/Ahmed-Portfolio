@@ -32,8 +32,15 @@
     }
   },
   "skills": {
-    "title": "Skills",
-    "kicker": "Tools I work with",
+    "title": "Skills & Expertise",
+    "kicker": "What I work with",
+    "subtitle": "Six clusters that map my day-to-day toolkit — calibrated by years of real projects.",
+    "interactHint": "Select a cluster",
+    "appliedIn": "Applied in",
+    "proficiencyLabel": "Proficiency",
+    "radarTitle": "Skills overview",
+    "radarSubtitle": "Self-assessed across the six clusters.",
+    "swipeHint": "Swipe to explore",
     "categories": {
       "frontend": "Front-End",
       "backend": "Back-End & APIs",
@@ -41,6 +48,32 @@
       "cloud": "Cloud & DevOps",
       "support": "IT Support",
       "tools": "Tools & Methods"
+    },
+    "clusters": {
+      "frontend": {
+        "subtitle": "Polished interfaces",
+        "description": "Accessible, responsive UIs built with modern React, Angular and TypeScript."
+      },
+      "backend": {
+        "subtitle": "Reliable services",
+        "description": "REST APIs, Microsoft Graph and Supabase RPC integrations, .NET Core back-ends."
+      },
+      "databases": {
+        "subtitle": "Structured data",
+        "description": "Modeling, querying and tuning SQL and NoSQL stores — from SQL Server to Supabase."
+      },
+      "cloud": {
+        "subtitle": "Ship & operate",
+        "description": "Deploying to Azure and Vercel, automating with Azure Functions and Azure DevOps."
+      },
+      "support": {
+        "subtitle": "Real-world IT",
+        "description": "Diagnosing incidents, communicating with users and writing documentation that lasts."
+      },
+      "tools": {
+        "subtitle": "Daily craft",
+        "description": "Editors, debugging tools and agile practices that keep delivery sharp."
+      }
     }
   },
   "experience": {
@@ -95,6 +128,8 @@
     "kicker": "Selected work",
     "viewSite": "Visit website",
     "viewCode": "View code",
+    "featured": "Featured",
+    "showMore": "more",
     "items": [
       {
         "name": "Carteron Industries",

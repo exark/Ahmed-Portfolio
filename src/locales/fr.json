@@ -32,8 +32,15 @@
     }
   },
   "skills": {
-    "title": "Compétences",
+    "title": "Compétences & Expertise",
     "kicker": "Mes outils de travail",
+    "subtitle": "Six pôles qui structurent mon quotidien — calibrés par plusieurs années de projets concrets.",
+    "interactHint": "Sélectionnez un pôle",
+    "appliedIn": "Appliqué dans",
+    "proficiencyLabel": "Maîtrise",
+    "radarTitle": "Vue d'ensemble",
+    "radarSubtitle": "Auto-évaluation sur les six pôles.",
+    "swipeHint": "Glissez pour explorer",
     "categories": {
       "frontend": "Front-End",
       "backend": "Back-End & APIs",
@@ -41,6 +48,32 @@
       "cloud": "Cloud & DevOps",
       "support": "Support IT",
       "tools": "Outils & Méthodes"
+    },
+    "clusters": {
+      "frontend": {
+        "subtitle": "Interfaces soignées",
+        "description": "UI accessibles et réactives avec React, Angular et TypeScript."
+      },
+      "backend": {
+        "subtitle": "Services fiables",
+        "description": "APIs REST, intégrations Microsoft Graph et Supabase RPC, back-ends .NET Core."
+      },
+      "databases": {
+        "subtitle": "Données structurées",
+        "description": "Modéliser, requêter et optimiser bases SQL et NoSQL — de SQL Server à Supabase."
+      },
+      "cloud": {
+        "subtitle": "Livrer & opérer",
+        "description": "Déploiement Azure et Vercel, automatisation avec Azure Functions et Azure DevOps."
+      },
+      "support": {
+        "subtitle": "Support de terrain",
+        "description": "Diagnostic d'incidents, communication utilisateur et documentation durable."
+      },
+      "tools": {
+        "subtitle": "Outils du quotidien",
+        "description": "Éditeurs, outils de debug et pratiques agiles pour livrer avec précision."
+      }
     }
   },
   "experience": {
@@ -95,6 +128,8 @@
     "kicker": "Sélection de réalisations",
     "viewSite": "Voir le site",
     "viewCode": "Voir le code",
+    "featured": "À la une",
+    "showMore": "de plus",
     "items": [
       {
         "name": "Carteron Industries",
