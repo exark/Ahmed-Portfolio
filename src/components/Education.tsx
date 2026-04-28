@@ -11,7 +11,15 @@ export function Education() {
   const langItems = t("languages.items", { returnObjects: true }) as LangItem[];
 
   return (
-    <Section id="education" kicker={t("education.kicker")} title={t("education.title")}>
+    <Section 
+      id="education" 
+      kicker={t("education.kicker")} 
+      title={t("education.title")}
+      backgroundImage="/ChatGPT Image 28 avr. 2026, 02_54_51.png"
+      backgroundOpacity={1}
+      backgroundPosition="center"
+      className="overflow-hidden"
+    >
       <div className="grid gap-6 md:grid-cols-2">
         {eduItems.map((e, i) => (
           <div

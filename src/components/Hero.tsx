@@ -13,53 +13,52 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden pt-24 pb-20 md:pt-36 md:pb-32"
     >
-      {/* Layer 1 — warm ivory base gradient */}
+      {/* Layer 1 — clean white base gradient (white → soft icy blue) */}
       <div className="pointer-events-none absolute inset-0 bg-hero" aria-hidden />
 
-      {/* Layer 2 — subtle marble wash (CSS-only).
-          Future: replace with /marble-texture.webp via the .bg-marble class. */}
-      <div
-        className="pointer-events-none absolute inset-0 bg-marble opacity-70"
+      {/* Layer 2 — luxury blue-marble columns background image
+          (right-anchored so columns sit behind the portrait, light marble flows toward the text) */}
+      <img
+        src="/marble-columns.png"
+        alt=""
         aria-hidden
+        loading="eager"
+        decoding="async"
+        className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-right opacity-[0.55]"
+        draggable={false}
       />
 
-      {/* Layer 3 — barely-visible paper grain for tactile, atelier feel */}
+      {/* Layer 3 — white-fade overlay so the text on the left stays perfectly readable */}
       <div
-        className="pointer-events-none absolute inset-0 texture-paper opacity-[0.18] mix-blend-multiply"
+        className="pointer-events-none absolute inset-0"
         aria-hidden
-      />
-
-      {/* Layer 4 — soft warm halo (top, behind name) */}
-      <div
-        className="pointer-events-none absolute -top-44 left-1/2 h-[640px] w-[1080px] -translate-x-1/2 rounded-full opacity-60 blur-3xl"
         style={{
           background:
-            "radial-gradient(closest-side, oklch(0.86 0.06 80 / 0.55), transparent 70%)",
+            "linear-gradient(90deg, oklch(1 0 0 / 0.88) 0%, oklch(1 0 0 / 0.62) 35%, oklch(1 0 0 / 0.20) 70%, oklch(1 0 0 / 0.05) 100%)",
+        }}
+      />
+
+      {/* Layer 4 — soft icy-blue halo (top, behind name) */}
+      <div
+        className="pointer-events-none absolute -top-44 left-1/2 h-[640px] w-[1080px] -translate-x-1/2 rounded-full opacity-50 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(closest-side, oklch(0.85 0.05 235 / 0.45), transparent 70%)",
         }}
         aria-hidden
       />
 
-      {/* Layer 5 — bronze ambient glow on the right (desktop only) */}
+      {/* Layer 5 — quiet champagne-gold glow on the right (desktop only) — echoes the marble's gold veins */}
       <div
-        className="pointer-events-none absolute right-[-10%] top-1/4 hidden h-[520px] w-[520px] rounded-full opacity-55 blur-3xl lg:block"
+        className="pointer-events-none absolute right-[-8%] top-1/4 hidden h-[520px] w-[520px] rounded-full opacity-45 blur-3xl lg:block"
         style={{
           background:
-            "radial-gradient(closest-side, oklch(0.72 0.10 65 / 0.30), transparent 70%)",
+            "radial-gradient(closest-side, oklch(0.80 0.08 92 / 0.22), transparent 70%)",
         }}
         aria-hidden
       />
 
-      {/* Layer 6 — quiet navy wash (left) for depth */}
-      <div
-        className="pointer-events-none absolute left-[-12%] bottom-1/4 hidden h-[460px] w-[460px] rounded-full opacity-25 blur-3xl lg:block"
-        style={{
-          background:
-            "radial-gradient(closest-side, oklch(0.55 0.08 250 / 0.35), transparent 70%)",
-        }}
-        aria-hidden
-      />
-
-      {/* Layer 7 — fade into background at bottom */}
+      {/* Layer 6 — fade into background at bottom */}
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[var(--color-background)]"
         aria-hidden
@@ -164,7 +163,7 @@ export function Hero() {
               </a>
             </motion.div>
 
-            {/* Ornamental bronze separator — refined, tasteful, not heavy */}
+            {/* Ornamental champagne-gold separator — refined, tasteful */}
             <motion.div
               initial={{ opacity: 0, scaleX: 0.6 }}
               animate={{ opacity: 1, scaleX: 1 }}
@@ -173,7 +172,7 @@ export function Hero() {
               aria-hidden
             >
               <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
-              <span className="divider-classical flex-1" />
+              <span className="divider-gold flex-1" />
               <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
             </motion.div>
 
@@ -230,30 +229,30 @@ function HeroPortrait() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="relative w-[14rem] sm:w-[16rem] lg:w-[19rem]"
     >
-      {/* Warm bronze glow halo behind portrait — atelier light feel */}
+      {/* Soft icy-blue glow halo behind portrait — cool, premium */}
       <div
         className="pointer-events-none absolute -inset-10 -z-10 rounded-[2.5rem] bg-portrait-glow opacity-95 blur-2xl"
         aria-hidden
       />
 
-      {/* Outer bronze ring — fine, gallery-frame detail */}
+      {/* Outer navy → champagne-gold ring — luxe frame detail */}
       <div
-        className="pointer-events-none absolute -inset-1 -z-10 rounded-[2.25rem] opacity-70"
+        className="pointer-events-none absolute -inset-1 -z-10 rounded-[2.25rem] opacity-75"
         style={{
           background:
-            "linear-gradient(135deg, oklch(0.62 0.10 65 / 0.35), oklch(0.22 0.05 255 / 0.20))",
+            "linear-gradient(135deg, oklch(0.22 0.06 255 / 0.35), oklch(0.78 0.07 92 / 0.30))",
         }}
         aria-hidden
       />
 
       {/* Portrait card */}
       <div className="relative overflow-hidden rounded-[2rem] border border-border bg-surface-elevated shadow-elevated">
-        {/* Top bronze accent line — like a museum frame edge */}
+        {/* Top champagne-gold accent line — fine luxury detail */}
         <span
           className="pointer-events-none absolute inset-x-0 top-0 z-10 h-px"
           style={{
             background:
-              "linear-gradient(90deg, transparent, oklch(0.62 0.10 65 / 0.65), transparent)",
+              "linear-gradient(90deg, transparent, oklch(0.78 0.08 92 / 0.75), transparent)",
           }}
           aria-hidden
         />
@@ -264,18 +263,18 @@ function HeroPortrait() {
           decoding="async"
           className="block aspect-[4/5] w-full object-cover"
         />
-        {/* Subtle warm vignette — sculpts the portrait gently */}
+        {/* Subtle navy vignette — sculpts the portrait gently */}
         <div
           className="pointer-events-none absolute inset-0 mix-blend-overlay"
           style={{
             background:
-              "linear-gradient(180deg, transparent 55%, oklch(0.22 0.05 255 / 0.20))",
+              "linear-gradient(180deg, transparent 55%, oklch(0.22 0.06 255 / 0.22))",
           }}
           aria-hidden
         />
       </div>
 
-      {/* Floating status chip — bronze indicator dot */}
+      {/* Floating status chip — champagne gold indicator dot */}
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}

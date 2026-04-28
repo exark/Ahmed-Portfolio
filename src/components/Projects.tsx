@@ -37,36 +37,36 @@ export function Projects() {
               id={`project-${slug}`}
               className="group relative flex scroll-mt-24 flex-col overflow-hidden rounded-3xl border border-border bg-surface-elevated p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-elevated md:p-8"
             >
-              {/* Soft warm gradient wash inside the card — gallery feel */}
+              {/* Clean white → icy-blue inner wash — luxury card feel */}
               <div
                 className="pointer-events-none absolute inset-0 opacity-60"
                 style={{
                   background:
-                    "linear-gradient(160deg, oklch(0.99 0.012 85) 0%, oklch(0.96 0.022 75 / 0.5) 60%, transparent 100%)",
+                    "linear-gradient(160deg, oklch(1 0 0) 0%, oklch(0.96 0.022 235 / 0.55) 60%, transparent 100%)",
                 }}
                 aria-hidden
               />
-              {/* Top bronze accent line — like a fine frame edge */}
+              {/* Top champagne-gold accent line — thin, refined frame edge */}
               <span
                 className="pointer-events-none absolute inset-x-0 top-0 h-px"
-                style={{ background: "var(--gradient-bronze-line)" }}
+                style={{ background: "var(--gradient-gold-line)" }}
                 aria-hidden
               />
-              {/* Warm hover halo (bronze) */}
+              {/* Soft icy-blue hover halo (top-right) */}
               <div
                 className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
                 style={{
                   background:
-                    "radial-gradient(closest-side, oklch(0.72 0.10 65 / 0.35), transparent)",
+                    "radial-gradient(closest-side, oklch(0.78 0.10 235 / 0.40), transparent)",
                 }}
                 aria-hidden
               />
-              {/* Quiet navy hover halo on the opposite corner for depth */}
+              {/* Royal navy hover halo (bottom-left) for premium depth */}
               <div
-                className="pointer-events-none absolute -left-20 -bottom-24 h-56 w-56 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40"
+                className="pointer-events-none absolute -left-20 -bottom-24 h-56 w-56 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-45"
                 style={{
                   background:
-                    "radial-gradient(closest-side, oklch(0.45 0.08 255 / 0.35), transparent)",
+                    "radial-gradient(closest-side, oklch(0.45 0.13 250 / 0.40), transparent)",
                 }}
                 aria-hidden
               />

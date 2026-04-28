@@ -42,71 +42,71 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Neo-classical shadows: warmer, softer, like museum lighting */
-  --shadow-soft: 0 1px 2px oklch(0.30 0.04 60 / 0.05), 0 4px 16px oklch(0.30 0.04 60 / 0.06);
-  --shadow-elevated: 0 2px 4px oklch(0.30 0.04 60 / 0.05), 0 12px 40px oklch(0.30 0.04 60 / 0.08);
-  --shadow-glow: 0 8px 60px oklch(0.62 0.10 65 / 0.20);
+  /* Luxury-tech shadows: cool, blue-tinted, premium Apple-like depth */
+  --shadow-soft: 0 1px 2px oklch(0.18 0.05 250 / 0.05), 0 4px 16px oklch(0.18 0.05 250 / 0.06);
+  --shadow-elevated: 0 2px 4px oklch(0.18 0.05 250 / 0.05), 0 12px 40px oklch(0.18 0.05 250 / 0.10);
+  --shadow-glow: 0 8px 60px oklch(0.42 0.13 250 / 0.22);
 
-  /* Hero: warm ivory descending into pale cream */
-  --gradient-hero: linear-gradient(180deg, oklch(0.985 0.015 85) 0%, oklch(0.96 0.022 75) 100%);
-  /* Accent: deep navy melting into antique bronze */
-  --gradient-accent: linear-gradient(135deg, oklch(0.22 0.05 255) 0%, oklch(0.62 0.10 65) 100%);
-  /* Text gradient: navy to bronze for headings */
-  --gradient-text: linear-gradient(135deg, oklch(0.20 0.04 255) 0%, oklch(0.45 0.09 65) 100%);
-  /* Portrait glow: warm atelier light */
-  --gradient-portrait-glow: radial-gradient(closest-side, oklch(0.78 0.10 70 / 0.45), oklch(0.62 0.10 65 / 0.22) 45%, transparent 75%);
-  /* Projects: gallery wall cream */
-  --gradient-section-projects: linear-gradient(180deg, oklch(0.97 0.020 80) 0%, oklch(0.955 0.024 75) 100%);
-  /* Bronze accent line (used for ornamental dividers) */
-  --gradient-bronze-line: linear-gradient(90deg, transparent, oklch(0.62 0.10 65 / 0.55), transparent);
+  /* Hero: clean white descending into soft icy blue */
+  --gradient-hero: linear-gradient(180deg, oklch(1 0 0) 0%, oklch(0.96 0.022 235) 100%);
+  /* Accent: deep navy melting into royal blue */
+  --gradient-accent: linear-gradient(135deg, oklch(0.22 0.06 255) 0%, oklch(0.45 0.13 250) 100%);
+  /* Text gradient: deep navy to royal navy for premium headings */
+  --gradient-text: linear-gradient(135deg, oklch(0.18 0.05 255) 0%, oklch(0.42 0.13 250) 100%);
+  /* Portrait glow: soft icy blue with a whisper of champagne gold */
+  --gradient-portrait-glow: radial-gradient(closest-side, oklch(0.85 0.05 235 / 0.55), oklch(0.78 0.07 92 / 0.18) 50%, transparent 75%);
+  /* Projects: white descending to soft icy blue */
+  --gradient-section-projects: linear-gradient(180deg, oklch(0.99 0.005 240) 0%, oklch(0.965 0.018 235) 100%);
+  /* Champagne gold accent line (refined, thin, used sparingly) */
+  --gradient-gold-line: linear-gradient(90deg, transparent, oklch(0.78 0.08 92 / 0.55), transparent);
 }
 
 :root {
   --radius: 0.875rem;
 
-  /* Neo-classical Apple palette
-     Warm ivory backgrounds, deep navy text, antique bronze accents.
-     Hue ~80 = ivory/cream, hue ~65 = bronze/gold, hue ~255 = navy. */
+  /* Luxury tech palette — white + navy + champagne gold.
+     Hue ~250 = navy/royal blue, hue ~92 = champagne gold,
+     hue ~235 = soft icy blue, hue ~240 = cool surface tint. */
 
-  --background: oklch(0.985 0.015 85);          /* warm ivory / off-white */
-  --foreground: oklch(0.20 0.04 255);            /* deep premium navy text */
+  --background: oklch(1 0 0);                   /* clean pure white */
+  --foreground: oklch(0.18 0.02 250);            /* near-black, faintly cool */
 
-  --surface: oklch(0.965 0.020 80);              /* subtle cream / warm grey */
-  --surface-elevated: oklch(0.992 0.012 85);     /* refined cream card */
+  --surface: oklch(0.97 0.012 240);              /* very light blue-grey */
+  --surface-elevated: oklch(1 0 0);              /* pure white card */
 
-  --card: oklch(0.992 0.012 85);
-  --card-foreground: oklch(0.20 0.04 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 250);
 
-  --popover: oklch(0.992 0.012 85);
-  --popover-foreground: oklch(0.20 0.04 255);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.02 250);
 
-  --primary: oklch(0.22 0.05 255);               /* navy primary */
-  --primary-foreground: oklch(0.985 0.015 85);
+  --primary: oklch(0.22 0.06 255);               /* deep navy */
+  --primary-foreground: oklch(0.99 0.002 250);
 
-  --secondary: oklch(0.955 0.020 78);
-  --secondary-foreground: oklch(0.22 0.05 255);
+  --secondary: oklch(0.96 0.014 240);
+  --secondary-foreground: oklch(0.22 0.06 255);
 
-  --muted: oklch(0.955 0.020 78);
-  --muted-foreground: oklch(0.48 0.018 75);      /* warmer mid grey */
+  --muted: oklch(0.96 0.014 240);
+  --muted-foreground: oklch(0.50 0.015 245);     /* neutral cool grey */
 
-  --accent: oklch(0.60 0.10 65);                 /* antique bronze / gold */
-  --accent-foreground: oklch(0.985 0.015 85);
+  --accent: oklch(0.74 0.085 92);                /* champagne gold */
+  --accent-foreground: oklch(0.18 0.02 250);
 
-  --navy: oklch(0.22 0.05 255);
-  --navy-foreground: oklch(0.985 0.015 85);
+  --navy: oklch(0.22 0.06 255);                  /* deep navy */
+  --navy-foreground: oklch(0.99 0.002 250);
 
-  --charcoal: oklch(0.32 0.020 60);              /* warm charcoal secondary */
+  --charcoal: oklch(0.30 0.020 250);             /* cool dark charcoal */
 
-  /* Cyan kept as a quiet supporting tone (used sparingly) */
-  --cyan: oklch(0.74 0.07 220);
-  --cyan-soft: oklch(0.93 0.025 220);
+  /* Supporting blues — soft icy / steel tones */
+  --cyan: oklch(0.72 0.09 235);                  /* royal blue accent */
+  --cyan-soft: oklch(0.92 0.025 235);            /* soft icy blue */
 
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0.015 85);
+  --destructive-foreground: oklch(0.99 0.002 250);
 
-  --border: oklch(0.90 0.014 75);                /* soft warm border */
-  --input: oklch(0.92 0.014 75);
-  --ring: oklch(0.60 0.10 65);                   /* bronze focus ring */
+  --border: oklch(0.91 0.012 240);               /* soft cool blue-grey border */
+  --input: oklch(0.93 0.012 240);
+  --ring: oklch(0.45 0.13 250);                  /* navy focus ring */
 }
 
 @layer base {
@@ -143,10 +143,10 @@
   }
 
   .glass {
-    background: oklch(0.992 0.012 85 / 0.72);
+    background: oklch(1 0 0 / 0.72);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border: 1px solid oklch(0.992 0.012 85 / 0.65);
+    border: 1px solid oklch(1 0 0 / 0.65);
   }
 
   .shadow-soft { box-shadow: var(--shadow-soft); }
@@ -159,56 +159,68 @@
   .bg-section-projects { background: var(--gradient-section-projects); }
 
   /* ------------------------------------------------------------------
-     Neo-classical texture & ornament utilities
-     CSS-only fallbacks. Future enhancement: drop in real images
-     (see commented background-image lines below).
+     Luxury-tech texture & ornament utilities
+     CSS-only fallbacks. Future enhancement: replace each .background-image
+     with a real asset (see the commented lines per utility).
+     Future image candidates:
+       /blue-marble-texture.webp
+       /navy-marble-gold-veins.webp
+       /white-blue-marble.webp
      ------------------------------------------------------------------ */
 
-  /* Subtle marble / paper feel. Future: /marble-texture.webp */
-  .bg-marble {
+  /* Soft white + icy-blue marble feel for light surfaces.
+     Future: replace CSS fallback with /blue-marble-texture.webp
+     or /white-blue-marble.webp via background-image. */
+  .bg-blue-marble {
     background-color: var(--color-background);
     background-image:
-      radial-gradient(ellipse at 18% 22%, oklch(1 0 0 / 0.55), transparent 55%),
-      radial-gradient(ellipse at 82% 78%, oklch(0.92 0.025 70 / 0.35), transparent 60%),
-      radial-gradient(ellipse at 50% 50%, oklch(0.95 0.020 80 / 0.25), transparent 70%);
-    /* background-image: url('/marble-texture.webp'), ...; */
+      radial-gradient(ellipse at 18% 22%, oklch(1 0 0 / 0.65), transparent 55%),
+      radial-gradient(ellipse at 82% 78%, oklch(0.85 0.05 235 / 0.30), transparent 60%),
+      radial-gradient(ellipse at 50% 50%, oklch(0.94 0.020 240 / 0.30), transparent 70%);
+    /* background-image:
+         url('/white-blue-marble.webp'),
+         url('/blue-marble-texture.webp');
+       background-size: cover; background-blend-mode: soft-light; */
   }
 
-  /* Atelier / museum wall warm light. Future: /classical-bg.webp */
-  .bg-atelier {
+  /* Deep navy marble with subtle champagne-gold veins for navy surfaces.
+     Future: replace CSS fallback with /navy-marble-gold-veins.webp. */
+  .bg-navy-marble {
+    background-color: var(--color-navy);
+    background-image:
+      radial-gradient(ellipse at 25% 30%, oklch(0.42 0.13 250 / 0.55), transparent 60%),
+      radial-gradient(ellipse at 75% 70%, oklch(0.78 0.08 92 / 0.18), transparent 55%),
+      linear-gradient(135deg, oklch(0.20 0.06 255) 0%, oklch(0.30 0.10 250) 100%);
+    /* background-image: url('/navy-marble-gold-veins.webp');
+       background-size: cover; background-blend-mode: overlay; */
+  }
+
+  /* Soft luxurious wash for hero / section transitions.
+     Future: replace CSS fallback with /white-blue-marble.webp. */
+  .bg-luxury-wash {
     background-color: var(--color-surface);
     background-image:
-      radial-gradient(ellipse at 30% 0%, oklch(0.98 0.022 75 / 0.85), transparent 60%),
-      radial-gradient(ellipse at 70% 100%, oklch(0.93 0.030 65 / 0.40), transparent 65%);
-    /* background-image: url('/classical-bg.webp'); background-size: cover; */
+      radial-gradient(ellipse at 30% 0%, oklch(1 0 0 / 0.85), transparent 60%),
+      radial-gradient(ellipse at 70% 100%, oklch(0.90 0.030 235 / 0.40), transparent 65%);
+    /* background-image: url('/white-blue-marble.webp');
+       background-size: cover; background-blend-mode: soft-light; */
   }
 
-  /* Romantic painting-style abstract wash. Future: /romantic-painting-bg.webp */
-  .bg-romantic {
-    background-color: var(--color-surface);
-    background-image:
-      radial-gradient(ellipse at 20% 30%, oklch(0.88 0.045 65 / 0.28), transparent 55%),
-      radial-gradient(ellipse at 80% 60%, oklch(0.80 0.040 255 / 0.20), transparent 60%);
-    /* background-image: url('/romantic-painting-bg.webp'); */
-  }
-
-  /* Very subtle paper grain via inline SVG noise (no external asset). */
-  .texture-paper {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.78  0 0 0 0 0.66  0 0 0 0 0.46  0 0 0 0.10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    background-repeat: repeat;
-    background-size: 220px 220px;
-  }
-
-  /* Thin bronze gradient line — for refined ornamental separators. */
-  .divider-classical {
+  /* Thin champagne-gold gradient line — refined ornamental separators. */
+  .divider-gold {
     height: 1px;
-    background: var(--gradient-bronze-line);
+    background: var(--gradient-gold-line);
     border: 0;
   }
 
-  /* Bronze-tinted soft glow (for subtle warm haloes behind elements). */
-  .bg-warm-glow {
-    background: radial-gradient(closest-side, oklch(0.78 0.10 70 / 0.40), transparent 70%);
+  /* Soft icy-blue glow (cool, modern, Apple-like). */
+  .bg-blue-glow {
+    background: radial-gradient(closest-side, oklch(0.78 0.10 235 / 0.40), transparent 70%);
+  }
+
+  /* Subtle champagne-gold glow (used sparingly for accent halos). */
+  .bg-gold-glow {
+    background: radial-gradient(closest-side, oklch(0.80 0.08 92 / 0.30), transparent 70%);
   }
 
   .container-page {

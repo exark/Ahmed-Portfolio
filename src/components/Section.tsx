@@ -7,6 +7,9 @@ interface SectionProps {
   title: string;
   children: ReactNode;
   className?: string;
+  backgroundImage?: string;
+  backgroundOpacity?: number;
+  backgroundPosition?: string;
 }
 
 const fade: Variants = {
@@ -14,10 +17,32 @@ const fade: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export function Section({ id, kicker, title, children, className = "" }: SectionProps) {
+export function Section({ id, kicker, title, children, className = "", backgroundImage, backgroundOpacity = 0.12, backgroundPosition = "center" }: SectionProps) {
   return (
-    <section id={id} className={`py-20 md:py-28 ${className}`}>
-      <div className="container-page">
+    <section id={id} className={`relative py-20 md:py-28 ${className}`}>
+      {backgroundImage && (
+        <>
+          <img
+            src={backgroundImage}
+            alt=""
+            aria-hidden
+            loading="lazy"
+            decoding="async"
+            className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover"
+            style={{ objectPosition: backgroundPosition, opacity: backgroundOpacity }}
+            draggable={false}
+          />
+          <div
+            className="pointer-events-none absolute inset-0"
+            aria-hidden
+            style={{
+              background:
+                "linear-gradient(90deg, oklch(1 0 0 / 0.70) 0%, oklch(1 0 0 / 0.50) 50%, oklch(1 0 0 / 0.70) 100%)",
+            }}
+          />
+        </>
+      )}
+      <div className="container-page relative z-10">
         <motion.div
           initial="hidden"
           whileInView="show"

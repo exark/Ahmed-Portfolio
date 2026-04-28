@@ -46,10 +46,10 @@ export function Contact() {
           onSubmit={onSubmit}
           className="relative md:col-span-3 space-y-4 overflow-hidden rounded-2xl border border-border bg-surface-elevated p-6 shadow-soft md:p-8"
         >
-          {/* Bronze top edge — refined frame detail */}
+          {/* Champagne-gold top edge — refined luxury detail */}
           <span
             className="pointer-events-none absolute inset-x-0 top-0 h-px"
-            style={{ background: "var(--gradient-bronze-line)" }}
+            style={{ background: "var(--gradient-gold-line)" }}
             aria-hidden
           />
           <div className="grid gap-4 sm:grid-cols-2">

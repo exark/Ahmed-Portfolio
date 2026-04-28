@@ -132,36 +132,45 @@ type ClusterPalette = {
   ring: string;
 };
 
+// Elegant luxury-tech cluster palette — navy, champagne gold,
+// different blues, charcoal black, refined pewter. Each `strong` tone
+// stays at L ≤ 0.45 so the white cluster icon reads clearly on it.
 const CLUSTER_COLOR: Record<ClusterKey, ClusterPalette> = {
   frontend: {
-    soft: "oklch(0.95 0.035 215)",
-    strong: "oklch(0.55 0.13 215)",
-    ring: "oklch(0.78 0.09 215)",
+    // Royal navy blue — primary brand identity
+    soft: "oklch(0.94 0.025 250)",
+    strong: "oklch(0.28 0.14 255)",
+    ring: "oklch(0.55 0.14 250)",
   },
   backend: {
-    soft: "oklch(0.95 0.035 262)",
-    strong: "oklch(0.45 0.14 262)",
-    ring: "oklch(0.70 0.10 262)",
+    // Deep champagne gold — luxe accent
+    soft: "oklch(0.95 0.035 92)",
+    strong: "oklch(0.42 0.09 92)",
+    ring: "oklch(0.74 0.085 92)",
   },
   databases: {
-    soft: "oklch(0.95 0.04 290)",
-    strong: "oklch(0.50 0.15 290)",
-    ring: "oklch(0.72 0.10 290)",
+    // Steel blue — data, infrastructure
+    soft: "oklch(0.94 0.030 225)",
+    strong: "oklch(0.38 0.11 230)",
+    ring: "oklch(0.68 0.10 225)",
   },
   cloud: {
-    soft: "oklch(0.95 0.035 230)",
-    strong: "oklch(0.55 0.13 230)",
-    ring: "oklch(0.75 0.10 230)",
+    // Sky / azure — airy, brighter blue
+    soft: "oklch(0.94 0.040 215)",
+    strong: "oklch(0.45 0.13 218)",
+    ring: "oklch(0.75 0.11 215)",
   },
   support: {
-    soft: "oklch(0.95 0.035 195)",
-    strong: "oklch(0.52 0.11 195)",
-    ring: "oklch(0.72 0.08 195)",
+    // Charcoal / near-black — sober, human-facing
+    soft: "oklch(0.94 0.008 245)",
+    strong: "oklch(0.22 0.020 250)",
+    ring: "oklch(0.50 0.020 245)",
   },
   tools: {
-    soft: "oklch(0.95 0.02 255)",
-    strong: "oklch(0.38 0.04 255)",
-    ring: "oklch(0.60 0.04 255)",
+    // Refined pewter / silver — workshop neutral
+    soft: "oklch(0.95 0.012 240)",
+    strong: "oklch(0.42 0.025 245)",
+    ring: "oklch(0.68 0.020 245)",
   },
 };
 
@@ -413,10 +422,10 @@ function ClusterDetail({
               {mounted && (
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart data={radarData} outerRadius="78%">
-                    <PolarGrid stroke="oklch(0.88 0.012 75)" />
+                    <PolarGrid stroke="oklch(0.90 0.010 240)" />
                     <PolarAngleAxis
                       dataKey="cat"
-                      tick={{ fill: "oklch(0.40 0.018 70)", fontSize: 11 }}
+                      tick={{ fill: "oklch(0.40 0.018 245)", fontSize: 11 }}
                     />
                     <PolarRadiusAxis
                       domain={[0, 100]}
@@ -427,8 +436,8 @@ function ClusterDetail({
                       name="proficiency"
                       dataKey="value"
                       stroke="oklch(0.30 0.06 255)"
-                      fill="oklch(0.62 0.10 65)"
-                      fillOpacity={0.20}
+                      fill="oklch(0.45 0.13 250)"
+                      fillOpacity={0.18}
                       strokeWidth={1.5}
                       isAnimationActive={false}
                       dot={(props) => {
@@ -448,9 +457,9 @@ function ClusterDetail({
                             fill={
                               isActive
                                 ? CLUSTER_COLOR[active].strong
-                                : "oklch(0.62 0.10 65)"
+                                : "oklch(0.45 0.13 250)"
                             }
-                            stroke="oklch(0.992 0.012 85)"
+                            stroke="oklch(1 0 0)"
                             strokeWidth={isActive ? 2 : 1}
                           />
                         );
