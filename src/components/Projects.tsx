@@ -23,7 +23,7 @@ export function Projects() {
       id="projects"
       kicker={t("projects.kicker")}
       title={t("projects.title")}
-      className="bg-surface"
+      className="bg-section-projects"
     >
       <div className="grid gap-6 lg:grid-cols-2">
         {items.map((p, i) => {
@@ -35,23 +35,38 @@ export function Projects() {
             <article
               key={i}
               id={`project-${slug}`}
-              className="group relative flex scroll-mt-24 flex-col overflow-hidden rounded-3xl border border-border bg-surface-elevated p-6 shadow-soft transition-all hover:-translate-y-1 hover:shadow-elevated md:p-8"
+              className="group relative flex scroll-mt-24 flex-col overflow-hidden rounded-3xl border border-border bg-surface-elevated p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-elevated md:p-8"
             >
-              {/* Top accent line */}
-              <span
-                className="pointer-events-none absolute inset-x-0 top-0 h-px"
+              {/* Soft warm gradient wash inside the card — gallery feel */}
+              <div
+                className="pointer-events-none absolute inset-0 opacity-60"
                 style={{
                   background:
-                    "linear-gradient(90deg, transparent, oklch(0.55 0.14 250 / 0.45), transparent)",
+                    "linear-gradient(160deg, oklch(0.99 0.012 85) 0%, oklch(0.96 0.022 75 / 0.5) 60%, transparent 100%)",
                 }}
                 aria-hidden
               />
-              {/* Hover halo */}
+              {/* Top bronze accent line — like a fine frame edge */}
+              <span
+                className="pointer-events-none absolute inset-x-0 top-0 h-px"
+                style={{ background: "var(--gradient-bronze-line)" }}
+                aria-hidden
+              />
+              {/* Warm hover halo (bronze) */}
               <div
-                className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-60"
+                className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
                 style={{
                   background:
-                    "radial-gradient(closest-side, oklch(0.75 0.12 250 / 0.4), transparent)",
+                    "radial-gradient(closest-side, oklch(0.72 0.10 65 / 0.35), transparent)",
+                }}
+                aria-hidden
+              />
+              {/* Quiet navy hover halo on the opposite corner for depth */}
+              <div
+                className="pointer-events-none absolute -left-20 -bottom-24 h-56 w-56 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-40"
+                style={{
+                  background:
+                    "radial-gradient(closest-side, oklch(0.45 0.08 255 / 0.35), transparent)",
                 }}
                 aria-hidden
               />
@@ -62,7 +77,7 @@ export function Projects() {
                     {p.subtitle}
                   </p>
                   {isFeatured && (
-                    <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-border bg-background px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.14em] text-charcoal">
+                    <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-accent/35 bg-surface-elevated px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.14em] text-charcoal shadow-soft">
                       <Sparkles size={10} className="text-accent" />
                       {t("projects.featured")}
                     </span>

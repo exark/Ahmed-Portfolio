@@ -126,6 +126,45 @@ const APPLIED: Record<ClusterKey, string[]> = {
   tools: ["Carteron Industries", "Soléne", "TMF Carrier"],
 };
 
+type ClusterPalette = {
+  soft: string;
+  strong: string;
+  ring: string;
+};
+
+const CLUSTER_COLOR: Record<ClusterKey, ClusterPalette> = {
+  frontend: {
+    soft: "oklch(0.95 0.035 215)",
+    strong: "oklch(0.55 0.13 215)",
+    ring: "oklch(0.78 0.09 215)",
+  },
+  backend: {
+    soft: "oklch(0.95 0.035 262)",
+    strong: "oklch(0.45 0.14 262)",
+    ring: "oklch(0.70 0.10 262)",
+  },
+  databases: {
+    soft: "oklch(0.95 0.04 290)",
+    strong: "oklch(0.50 0.15 290)",
+    ring: "oklch(0.72 0.10 290)",
+  },
+  cloud: {
+    soft: "oklch(0.95 0.035 230)",
+    strong: "oklch(0.55 0.13 230)",
+    ring: "oklch(0.75 0.10 230)",
+  },
+  support: {
+    soft: "oklch(0.95 0.035 195)",
+    strong: "oklch(0.52 0.11 195)",
+    ring: "oklch(0.72 0.08 195)",
+  },
+  tools: {
+    soft: "oklch(0.95 0.02 255)",
+    strong: "oklch(0.38 0.04 255)",
+    ring: "oklch(0.60 0.04 255)",
+  },
+};
+
 export function slugifyProject(name: string): string {
   return name
     .toLowerCase()
@@ -222,11 +261,15 @@ function ClusterList({
                 />
               )}
               <span
-                className={`relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors ${
-                  isActive
-                    ? "bg-navy text-navy-foreground"
-                    : "bg-muted text-charcoal group-hover:bg-surface-elevated"
-                }`}
+                className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors"
+                style={{
+                  background: isActive
+                    ? CLUSTER_COLOR[key].strong
+                    : CLUSTER_COLOR[key].soft,
+                  color: isActive
+                    ? "oklch(1 0 0)"
+                    : "oklch(0.30 0.015 250)",
+                }}
               >
                 <Icon size={18} />
               </span>
@@ -270,11 +313,21 @@ function ClusterDetail({
   return (
     <div className="md:col-span-7 lg:col-span-8">
       <div className="relative overflow-hidden rounded-3xl border border-border bg-surface-elevated p-7 shadow-elevated md:p-9">
-        <div
-          className="pointer-events-none absolute -right-24 -top-20 h-72 w-72 rounded-full opacity-50 blur-3xl"
+        <motion.div
+          key={`halo-${active}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.55 }}
+          transition={{ duration: 0.5 }}
+          className="pointer-events-none absolute -right-24 -top-20 h-72 w-72 rounded-full blur-3xl"
           style={{
-            background:
-              "radial-gradient(closest-side, oklch(0.78 0.10 250 / 0.5), transparent)",
+            background: `radial-gradient(closest-side, ${CLUSTER_COLOR[active].ring}, transparent)`,
+          }}
+          aria-hidden
+        />
+        <span
+          className="pointer-events-none absolute inset-x-0 top-0 h-px"
+          style={{
+            background: `linear-gradient(90deg, transparent, ${CLUSTER_COLOR[active].ring}, transparent)`,
           }}
           aria-hidden
         />
@@ -288,7 +341,13 @@ function ClusterDetail({
               exit="exit"
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-navy text-navy-foreground">
+                <div
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl"
+                  style={{
+                    background: CLUSTER_COLOR[active].strong,
+                    color: "oklch(1 0 0)",
+                  }}
+                >
                   <Icon size={20} />
                 </div>
                 <div className="min-w-0">
@@ -354,10 +413,10 @@ function ClusterDetail({
               {mounted && (
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart data={radarData} outerRadius="78%">
-                    <PolarGrid stroke="oklch(0.88 0.008 250)" />
+                    <PolarGrid stroke="oklch(0.88 0.012 75)" />
                     <PolarAngleAxis
                       dataKey="cat"
-                      tick={{ fill: "oklch(0.40 0.02 250)", fontSize: 11 }}
+                      tick={{ fill: "oklch(0.40 0.018 70)", fontSize: 11 }}
                     />
                     <PolarRadiusAxis
                       domain={[0, 100]}
@@ -367,9 +426,9 @@ function ClusterDetail({
                     <Radar
                       name="proficiency"
                       dataKey="value"
-                      stroke="oklch(0.45 0.12 250)"
-                      fill="oklch(0.55 0.14 250)"
-                      fillOpacity={0.18}
+                      stroke="oklch(0.30 0.06 255)"
+                      fill="oklch(0.62 0.10 65)"
+                      fillOpacity={0.20}
                       strokeWidth={1.5}
                       isAnimationActive={false}
                       dot={(props) => {
@@ -388,10 +447,10 @@ function ClusterDetail({
                             r={isActive ? 5 : 3}
                             fill={
                               isActive
-                                ? "oklch(0.22 0.05 255)"
-                                : "oklch(0.55 0.14 250)"
+                                ? CLUSTER_COLOR[active].strong
+                                : "oklch(0.62 0.10 65)"
                             }
-                            stroke="oklch(1 0 0)"
+                            stroke="oklch(0.992 0.012 85)"
                             strokeWidth={isActive ? 2 : 1}
                           />
                         );
@@ -459,17 +518,29 @@ function MobileSwipe({
                 className="min-w-0 flex-[0_0_92%] pr-3"
               >
                 <div className="relative h-full overflow-hidden rounded-3xl border border-border bg-surface-elevated p-6 shadow-soft">
-                  <div
-                    className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full opacity-40 blur-3xl"
+                  <span
+                    className="pointer-events-none absolute inset-x-0 top-0 h-px"
                     style={{
-                      background:
-                        "radial-gradient(closest-side, oklch(0.78 0.10 250 / 0.6), transparent)",
+                      background: `linear-gradient(90deg, transparent, ${CLUSTER_COLOR[key].ring}, transparent)`,
+                    }}
+                    aria-hidden
+                  />
+                  <div
+                    className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full opacity-50 blur-3xl"
+                    style={{
+                      background: `radial-gradient(closest-side, ${CLUSTER_COLOR[key].ring}, transparent)`,
                     }}
                     aria-hidden
                   />
                   <div className="relative">
                     <div className="flex items-start gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-navy text-navy-foreground">
+                      <div
+                        className="flex h-10 w-10 items-center justify-center rounded-xl"
+                        style={{
+                          background: CLUSTER_COLOR[key].strong,
+                          color: "oklch(1 0 0)",
+                        }}
+                      >
                         <Icon size={18} />
                       </div>
                       <div className="min-w-0">
@@ -494,8 +565,11 @@ function MobileSwipe({
                       </div>
                       <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
                         <div
-                          className="h-full rounded-full bg-accent-gradient"
-                          style={{ width: `${PROFICIENCY[key]}%` }}
+                          className="h-full rounded-full"
+                          style={{
+                            width: `${PROFICIENCY[key]}%`,
+                            background: `linear-gradient(90deg, ${CLUSTER_COLOR[key].ring}, ${CLUSTER_COLOR[key].strong})`,
+                          }}
                         />
                       </div>
                     </div>
@@ -539,17 +613,25 @@ function MobileSwipe({
       </div>
       <div className="mt-5 flex items-center justify-between gap-4 px-1">
         <div className="flex gap-1.5">
-          {CLUSTER_ORDER.map((key, i) => (
-            <button
-              key={key}
-              type="button"
-              aria-label={key}
-              onClick={() => emblaApi?.scrollTo(i)}
-              className={`h-1.5 rounded-full transition-all ${
-                i === selectedIndex ? "w-6 bg-navy" : "w-1.5 bg-border"
-              }`}
-            />
-          ))}
+          {CLUSTER_ORDER.map((key, i) => {
+            const selected = i === selectedIndex;
+            return (
+              <button
+                key={key}
+                type="button"
+                aria-label={key}
+                onClick={() => emblaApi?.scrollTo(i)}
+                className={`h-1.5 rounded-full transition-all ${
+                  selected ? "w-6" : "w-1.5 bg-border"
+                }`}
+                style={
+                  selected
+                    ? { background: CLUSTER_COLOR[key].strong }
+                    : undefined
+                }
+              />
+            );
+          })}
         </div>
         <p className="text-[11px] text-muted-foreground">
           {t("skills.swipeHint")}

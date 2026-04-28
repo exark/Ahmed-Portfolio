@@ -7,20 +7,31 @@ export function Resume() {
     <section id="resume" className="py-20 md:py-24">
       <div className="container-page">
         <div className="relative overflow-hidden rounded-3xl bg-navy px-8 py-14 text-navy-foreground shadow-elevated md:px-14 md:py-20">
-          <div
-            className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-40 blur-3xl"
-            style={{ background: "radial-gradient(closest-side, oklch(0.7 0.18 250), transparent)" }}
+          {/* Top bronze accent line — frame-edge detail */}
+          <span
+            className="pointer-events-none absolute inset-x-0 top-0 h-px"
+            style={{
+              background:
+                "linear-gradient(90deg, transparent, oklch(0.78 0.12 65 / 0.85), transparent)",
+            }}
             aria-hidden
           />
+          {/* Warm bronze glow (top-right) */}
           <div
-            className="pointer-events-none absolute -left-20 -bottom-32 h-80 w-80 rounded-full opacity-30 blur-3xl"
-            style={{ background: "radial-gradient(closest-side, oklch(0.65 0.14 230), transparent)" }}
+            className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full opacity-50 blur-3xl"
+            style={{ background: "radial-gradient(closest-side, oklch(0.72 0.12 65), transparent)" }}
+            aria-hidden
+          />
+          {/* Quiet ivory glow (bottom-left) */}
+          <div
+            className="pointer-events-none absolute -left-20 -bottom-32 h-80 w-80 rounded-full opacity-25 blur-3xl"
+            style={{ background: "radial-gradient(closest-side, oklch(0.85 0.04 75), transparent)" }}
             aria-hidden
           />
 
           <div className="relative grid items-center gap-8 md:grid-cols-[1fr_auto]">
             <div>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-navy-foreground/60">
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-accent">
                 {t("resume.kicker")}
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight md:text-5xl">

@@ -22,9 +22,9 @@
   "about": {
     "title": "About",
     "kicker": "A hybrid technical profile",
-    "p1": "I'm a software engineering graduate specialized in software architecture, with hands-on experience in full-stack web development across React, Angular, TypeScript and .NET Core.",
-    "p2": "I work daily with cloud platforms like Microsoft Azure and Supabase, design SQL data models, integrate APIs such as Microsoft Graph, and ship production interfaces deployed on Vercel.",
-    "p3": "Alongside engineering, I bring a strong technical support background — diagnosing real incidents, communicating with users, and writing the kind of clear documentation that makes software easier to live with.",
+    "p1": "I'm a <hi>software engineering graduate</hi> specialized in software architecture, with hands-on experience in full-stack web development across <hi>React, Angular, TypeScript and .NET Core</hi>.",
+    "p2": "I work daily with cloud platforms like <hi>Microsoft Azure and Supabase</hi>, design SQL data models, integrate APIs such as <hi>Microsoft Graph</hi>, and ship production interfaces deployed on Vercel.",
+    "p3": "Alongside engineering, I bring a <hi>strong technical support background</hi> — diagnosing real incidents, communicating with users, and writing the kind of clear documentation that makes software easier to live with.",
     "stats": {
       "years": "Years of experience",
       "projects": "Production projects",
