@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, Download, Mail, MapPin, Github } from "lucide-react";
 
-const PORTRAIT_SRC = "/366711480_6861379807205813_8386452105849708350_n.jpg";
+const PORTRAIT_SRC = "/ChatGPT Image 1 mai 2026, 15_23_17.png";
 
 export function Hero() {
   const { t } = useTranslation();
@@ -67,7 +67,7 @@ export function Hero() {
       <div className="container-page relative">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14">
           {/* Text column */}
-          <div className="order-2 lg:order-1 lg:col-span-7">
+          <div className="lg:col-span-7">
             {/* Availability pill */}
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -118,6 +118,11 @@ export function Hero() {
                 </span>
               ))}
             </motion.div>
+
+            {/* Portrait mobile/tablet - between roles and tagline */}
+            <div className="mt-8 flex justify-center lg:hidden">
+              <HeroPortrait />
+            </div>
 
             {/* Tagline */}
             <motion.p
@@ -211,8 +216,8 @@ export function Hero() {
             </motion.div>
           </div>
 
-          {/* Portrait column */}
-          <div className="order-1 flex justify-center lg:order-2 lg:col-span-5 lg:justify-end">
+          {/* Portrait column - desktop only */}
+          <div className="hidden lg:flex lg:col-span-5 lg:justify-end">
             <HeroPortrait />
           </div>
         </div>
